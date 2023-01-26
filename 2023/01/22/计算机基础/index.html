@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"shenhongwei33.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideDownIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"shenhongwei33.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideDownIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="计算机网络OSI 和 TCP&#x2F;IP 网络分层模型详解（基础）OSI 七层模型OSI 七层模型 是国际标准化组织提出一个网络分层模型，其大体结构以及每一层提供的功能如下图所示： 每一层都专注做一件事情，并且每一层都需要使用下一层提供的功能比如传输层需要使用网络层提供的路由和寻址功能，这样传输层才知道把数据传输到哪里去。OSI 的七层体系结构概念清楚，理论也很完整，但是它比较复杂而且不实用，而且有些功">
@@ -319,7 +319,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2023/01/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/01/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -455,11 +469,11 @@
 <h2 id="计算机网络常见知识点-amp-面试题"><a href="#计算机网络常见知识点-amp-面试题" class="headerlink" title="计算机网络常见知识点&amp;面试题"></a>计算机网络常见知识点&amp;面试题</h2><h3 id="应用层有哪些常见的协议？"><a href="#应用层有哪些常见的协议？" class="headerlink" title="应用层有哪些常见的协议？"></a>应用层有哪些常见的协议？</h3><h4 id="HTTP-超文本传输协议"><a href="#HTTP-超文本传输协议" class="headerlink" title="HTTP:超文本传输协议"></a>HTTP:超文本传输协议</h4><p>超文本传输协议（HTTP，HyperText Transfer Protocol) 主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的，整个过程如下图所示。<br><img src="/2023/01/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/HTTP.png"></p>
 <p>HTTP 协是基于 TCP协议，发送 HTTP 请求之前首先要建立 TCP 连接也就是要经历 3 次握手。目前使用的 HTTP 协议大部分都是 1.1。在 1.1 的协议里面，默认是开启了 Keep-Alive 的，这样的话建立的连接就可以在多次请求中被复用了。另外， HTTP 协议是”无状态”的协议，它无法记录客户端用户的状态，一般我们都是通过 Session 来记录客户端用户的状态。</p>
 <h4 id="SMTP-简单邮件传输-发送-协议"><a href="#SMTP-简单邮件传输-发送-协议" class="headerlink" title="SMTP:简单邮件传输(发送)协议"></a>SMTP:简单邮件传输(发送)协议</h4><p>简单邮件传输(发送)协议（SMTP，Simple Mail Transfer Protocol） 基于 <strong>TCP 协议</strong>，用来<strong>发送电子邮件</strong>。<br><strong>注意⚠️：接受邮件的协议不是 SMTP 而是 POP3 协议。</strong></p>
-<h5 id="电子邮件的发送过程？"><a href="#电子邮件的发送过程？" class="headerlink" title="电子邮件的发送过程？"></a>电子邮件的发送过程？</h5><p>比如我的邮箱是“<a href="mailto:&#100;&#x61;&#x62;&#x61;&#x69;&#x40;&#99;&#115;&#122;&#x68;&#105;&#x6e;&#97;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#100;&#x61;&#x62;&#x61;&#x69;&#x40;&#99;&#115;&#122;&#x68;&#105;&#x6e;&#97;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a>”，我要向“<a href="mailto:&#120;&#105;&#97;&#111;&#x6d;&#x61;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#120;&#105;&#97;&#111;&#x6d;&#x61;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a>”发送邮件，整个过程可以简单分为下面几步：</p>
+<h5 id="电子邮件的发送过程？"><a href="#电子邮件的发送过程？" class="headerlink" title="电子邮件的发送过程？"></a>电子邮件的发送过程？</h5><p>比如我的邮箱是“<a href="mailto:&#100;&#97;&#x62;&#97;&#x69;&#x40;&#99;&#115;&#x7a;&#x68;&#x69;&#110;&#97;&#110;&#46;&#99;&#x6f;&#109;">&#100;&#97;&#x62;&#97;&#x69;&#x40;&#99;&#115;&#x7a;&#x68;&#x69;&#110;&#97;&#110;&#46;&#99;&#x6f;&#109;</a>”，我要向“<a href="mailto:&#x78;&#x69;&#x61;&#x6f;&#x6d;&#97;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#x78;&#x69;&#x61;&#x6f;&#x6d;&#97;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a>”发送邮件，整个过程可以简单分为下面几步：</p>
 <ol>
 <li>通过 SMTP 协议，我将我写好的邮件交给163邮箱服务器（邮局）。</li>
 <li>163邮箱服务器发现我发送的邮箱是qq邮箱，然后它使用 SMTP协议将我的邮件转发到 qq邮箱服务器。</li>
-<li>qq邮箱服务器接收邮件之后就通知邮箱为“<a href="mailto:&#120;&#105;&#x61;&#x6f;&#109;&#x61;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#120;&#105;&#x61;&#x6f;&#109;&#x61;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>”的用户来收邮件，然后用户就通过 POP3/IMAP 协议将邮件取出。</li>
+<li>qq邮箱服务器接收邮件之后就通知邮箱为“<a href="mailto:&#120;&#x69;&#97;&#111;&#x6d;&#97;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#120;&#x69;&#97;&#111;&#x6d;&#97;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a>”的用户来收邮件，然后用户就通过 POP3/IMAP 协议将邮件取出。</li>
 </ol>
 <h5 id="如何判断邮箱是真正存在的？"><a href="#如何判断邮箱是真正存在的？" class="headerlink" title="如何判断邮箱是真正存在的？"></a>如何判断邮箱是真正存在的？</h5><p>很多场景(比如邮件营销)下面我们需要判断我们要发送的邮箱地址是否真的存在，这个时候我们可以利用 SMTP 协议来检测：</p>
 <ol>
@@ -982,7 +996,7 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1226,23 +1240,32 @@ if (document.querySelectorAll('pre.mermaid').length) {
       });
   </script>
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '7caf102ae14da863e229',
-      clientSecret: '36112d33a0c873b4a9f2ea922f01b889256554a1',
-      repo        : 'shenhongwei33.GitHub.io',
-      owner       : 'shenhongwei33',
-      admin       : ['shenhongwei33'],
-      id          : 'd56e7078d8d663bbeef3fa7218dc64e3',
-        language: '',
-      distractionFreeMode: true
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'fFqrBFTPRs63Tzp2ncGtrYbR-MdYXbMMI',
+      appKey     : 'gWOiLxTMiii3J3T3NlOHomTl',
+      placeholder: "说出你的看法~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
 });
 </script>
 
